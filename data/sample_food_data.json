@@ -1,0 +1,26 @@
+[
+    {
+        "food_id": 1,
+        "food_type": "Apple",
+        "weight_grams": 150,
+        "calories": 80
+    },
+    {
+        "food_id": 2,
+        "food_type": "Chicken Breast",
+        "weight_grams": 200,
+        "calories": 330
+    },
+    {
+        "food_id": 3,
+        "food_type": "Brown Rice",
+        "weight_grams": 100,
+        "calories": 112
+    },
+    {
+        "food_id": 4,
+        "food_type": "Avocado",
+        "weight_grams": 50,
+        "calories": 80
+    }
+]

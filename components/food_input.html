@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log Food Intake</title>
+    <link rel="stylesheet" href="../style.css"> <!-- Adjusted path for CSS -->
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Log Food Intake</h1>
+        <p>Enter the type and weight of food to track your caloric intake.</p>
+    </header>
+
+    <main>
+        <div class="container">
+            <form id="foodIntakeForm">
+                <div class="form-group">
+                    <label for="foodType">Food Type:</label>
+                    <input type="text" id="foodType" required placeholder="e.g., Apple">
+                </div>
+                <div class="form-group">
+                    <label for="weight">Weight (grams):</label>
+                    <input type="number" id="weight" required placeholder="e.g., 150">
+                </div>
+                <div class="form-group">
+                    <label for="calories">Calories:</label>
+                    <input type="number" id="calories" disabled placeholder="Calculated Calories">
+                </div>
+                <button type="button" onclick="calculateCalories()">Calculate Calories</button>
+                <button type="submit">Log Food Intake</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Smart Food. All Rights Reserved.</p>
+        <p>Contact us: support@smartfood.com</p>
+    </footer>
+    
+    <script src="../script.js"></script> <!-- Adjusted path for JavaScript -->
+</body>
+</html>

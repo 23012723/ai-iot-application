@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Monitoring</title>
+    <link rel="stylesheet" href="../style.css"> <!-- Adjust path if necessary -->
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Activity Monitoring</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="card">
+                <h2>Log Your Activity</h2>
+                <label for="travel-distance">Travel Distance (km):</label>
+                <input type="number" id="travel-distance" placeholder="Enter distance" required>
+                
+                <label for="activity-time">Activity Time (minutes):</label>
+                <input type="number" id="activity-time" placeholder="Enter time" required>
+                
+                <button onclick="calculateCalories()">Log Activity</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Smart Food. All Rights Reserved.</p>
+        <p>Contact us: support@smartfood.com</p>
+    </footer>
+    
+    <script src="../script.js"></script> <!-- Adjust path if necessary -->
+</body>
+</html>

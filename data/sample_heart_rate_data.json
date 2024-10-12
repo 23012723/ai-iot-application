@@ -1,0 +1,26 @@
+[
+    {
+        "entry_id": 1,
+        "activity_type": "Walking",
+        "average_heart_rate_bpm": 100,
+        "duration_minutes": 30
+    },
+    {
+        "entry_id": 2,
+        "activity_type": "Running",
+        "average_heart_rate_bpm": 145,
+        "duration_minutes": 45
+    },
+    {
+        "entry_id": 3,
+        "activity_type": "Cycling",
+        "average_heart_rate_bpm": 130,
+        "duration_minutes": 60
+    },
+    {
+        "entry_id": 4,
+        "activity_type": "Swimming",
+        "average_heart_rate_bpm": 120,
+        "duration_minutes": 20
+    }
+]

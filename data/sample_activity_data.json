@@ -1,0 +1,26 @@
+[
+    {
+        "activity_id": 1,
+        "activity_type": "Walking",
+        "duration_minutes": 30,
+        "calories_burned": 150
+    },
+    {
+        "activity_id": 2,
+        "activity_type": "Running",
+        "duration_minutes": 45,
+        "calories_burned": 450
+    },
+    {
+        "activity_id": 3,
+        "activity_type": "Cycling",
+        "duration_minutes": 60,
+        "calories_burned": 500
+    },
+    {
+        "activity_id": 4,
+        "activity_type": "Swimming",
+        "duration_minutes": 20,
+        "calories_burned": 250
+    }
+]

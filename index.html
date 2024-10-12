@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Food App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Smart Food App</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="graphs.html">View Graphs</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="card">
+                <img src="puttin D.salt.jpg" alt="Track Your Intake"> 
+                <h2>Track Your Intake</h2>
+                <button onclick="window.location.href='components/food_input.html'">Log Food Intake</button>
+            </div>
+            <div class="card">
+                <img src="winning D.race.jpg" alt="Activity Monitoring"> 
+                <h2>Activity Monitoring</h2>
+                <button onclick="window.location.href='components/activity_input.html'">Log Daily Activity</button>
+            </div>
+            <div class="card">
+                <img src="pump D.blood.jpg" alt="Heart Rate Monitoring"> 
+                <h2>Heart Rate Monitoring</h2>
+                <button onclick="window.location.href='components/heart_monitor.html'">Log Heart Rate</button>
+            </div>
+            <div class="card">
+                <img src="draw D.values.jpg" alt="View Graphs"> 
+                <h2>View Graphs</h2>
+                <button onclick="window.location.href='graphs.html'">See Your Progress</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Smart Food. All Rights Reserved.</p>
+        <p>Contact us: support@smartfood.com</p>
+    </footer>
+    <script src="path/to/calculate_calories.js"></script>
+    <script src="path/to/generate_advice.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

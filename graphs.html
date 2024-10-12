@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Food App - Graph</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">Smart Food</div>
+    <div class="user-options">
+      <button class="btn">Settings</button>
+      <button class="btn">Profile</button>
+      <button class="btn">Logout</button>
+    </div>
+  </header>
+
+  <!-- Main Section -->
+  <main class="main-section">
+    <h1>Progress Chart</h1>
+    <div class="chart-container">
+      <canvas id="progressChart"></canvas>
+    </div>
+  </main>
+
+  <!-- JavaScript for Chart -->
+  <script>
+    // Sample data (Replace with actual data as needed)
+    const caloriesConsumedData = [200, 300, 250, 400, 350]; // Example data
+    const caloriesBurntData = [150, 250, 200, 300, 270]; // Example data
+    const stepsData = [5000, 6000, 7000, 8000, 9000]; // Example data
+
+    // Chart Configuration
+    const ctx = document.getElementById('progressChart').getContext('2d');
+    const progressChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
+        datasets: [
+          {
+            label: 'Calories Consumed (kcal)',
+            data: caloriesConsumedData,
+            borderColor: '#4A90E2',
+            fill: false,
+          },
+          {
+            label: 'Calories Burnt (kcal)',
+            data: caloriesBurntData,
+            borderColor: '#E94E77',
+            fill: false,
+          },
+          {
+            label: 'Steps Taken',
+            data: stepsData,
+            borderColor: '#8E44AD',
+            fill: false,
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          x: {
+            title: {
+              display: true,
+              text: 'Days',
+            },
+          },
+          y: {
+            title: {
+              display: true,
+              text: 'Calories / Steps',
+            },
+            beginAtZero: true,
+          },
+        },
+      },
+    });
+  </script>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2024 Smart Food App</p>
+    <a href="#">Terms & Conditions</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Contact Us</a>
+  </footer>
+
+</body>
+</html>

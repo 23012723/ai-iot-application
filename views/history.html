@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History | Diabetes Tracker</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+    <!-- Include Header -->
+    <div class="header">
+        <!-- Insert header.html content here or include via server-side include -->
+        <?php include 'header.html'; ?>
+    </div>
+
+    <main>
+        <section class="history-section">
+            <h2>Your Historical Data</h2>
+            
+            <div class="data-filters">
+                <label for="data-type">Select Data Type:</label>
+                <select id="data-type">
+                    <option value="food">Food Intake</option>
+                    <option value="activity">Activity</option>
+                    <option value="heart-rate">Heart Rate</option>
+                </select>
+                
+                <label for="date-range">Select Date Range:</label>
+                <input type="date" id="start-date">
+                <input type="date" id="end-date">
+                
+                <button id="view-history">View History</button>
+            </div>
+
+            <div class="data-display">
+                <!-- Area to dynamically show historical data for selected filters -->
+                <canvas id="history-chart"></canvas>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Diabetes Tracker. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
