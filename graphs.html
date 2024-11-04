@@ -13,49 +13,68 @@
   <header class="header">
     <div class="logo">Smart Food</div>
     <div class="user-options">
-      <button class="btn">Settings</button>
-      <button class="btn">Profile</button>
-      <button class="btn">Logout</button>
+      <button class="btn" onclick="window.location.href='settings.html'">Settings</button>
+      <button class="btn" onclick="window.location.href='profile.html'">Profile</button>
+      <button class="btn" onclick="logout()">Logout</button>
     </div>
   </header>
 
-  <!-- Main Section -->
+  <!-- Example Cards (Replace with real data in your app) -->
+  <div class="card-container">
+    <div id="calories-consumed-card" class="card" data-consumed="200">Calories Consumed: 200 kcal</div>
+    <div id="calories-burnt-card" class="card" data-burnt="150">Calories Burnt: 150 kcal</div>
+    <div id="steps-card" class="card" data-steps="5000">Steps Taken: 5000 steps</div>
+    <!-- Add more cards as needed -->
+  </div>
+
+  <!-- Main Section for Graph -->
   <main class="main-section">
     <h1>Progress Chart</h1>
     <div class="chart-container">
-      <canvas id="progressChart"></canvas>
+      <canvas id="progressChart" aria-label="Progress Chart" role="img"></canvas>
     </div>
   </main>
 
-  <!-- JavaScript for Chart -->
+  <!-- JavaScript to Fetch Data and Update Chart -->
   <script>
-    // Sample data (Replace with actual data as needed)
-    const caloriesConsumedData = [200, 300, 250, 400, 350]; // Example data
-    const caloriesBurntData = [150, 250, 200, 300, 270]; // Example data
-    const stepsData = [5000, 6000, 7000, 8000, 9000]; // Example data
+    // Function to extract data from cards
+    function getDataFromCards() {
+      const caloriesConsumed = document.getElementById('calories-consumed-card').getAttribute('data-consumed');
+      const caloriesBurnt = document.getElementById('calories-burnt-card').getAttribute('data-burnt');
+      const stepsTaken = document.getElementById('steps-card').getAttribute('data-steps');
 
-    // Chart Configuration
+      return {
+        consumed: parseInt(caloriesConsumed),
+        burnt: parseInt(caloriesBurnt),
+        steps: parseInt(stepsTaken)
+      };
+    }
+
+    // Fetch data from cards and store in variables
+    const data = getDataFromCards();
+
+    // Chart.js configuration
     const ctx = document.getElementById('progressChart').getContext('2d');
     const progressChart = new Chart(ctx, {
       type: 'line',
       data: {
-        labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
+        labels: ['Today'],  // You can adjust this for time periods, e.g., days of the week
         datasets: [
           {
             label: 'Calories Consumed (kcal)',
-            data: caloriesConsumedData,
+            data: [data.consumed],  // Data fetched from card
             borderColor: '#4A90E2',
             fill: false,
           },
           {
             label: 'Calories Burnt (kcal)',
-            data: caloriesBurntData,
+            data: [data.burnt],  // Data fetched from card
             borderColor: '#E94E77',
             fill: false,
           },
           {
             label: 'Steps Taken',
-            data: stepsData,
+            data: [data.steps],  // Data fetched from card
             borderColor: '#8E44AD',
             fill: false,
           },
@@ -79,6 +98,15 @@
             beginAtZero: true,
           },
         },
+        plugins: {
+          tooltip: {
+            callbacks: {
+              label: function(tooltipItem) {
+                return tooltipItem.dataset.label + ': ' + tooltipItem.raw;
+              }
+            }
+          }
+        }
       },
     });
   </script>
